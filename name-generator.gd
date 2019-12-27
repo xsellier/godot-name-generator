@@ -59,7 +59,7 @@ static func generate(min_length=MIN_LENGTH, max_length=MAX_LENGTH):
   var state = 'INITIAL'
 
   while index < length:
-    var obj = get_letter(state, last_letter, index - length)
+    var obj = get_letter(state, last_letter, length - index)
 
     state = obj[0]
     last_letter = obj[1]
